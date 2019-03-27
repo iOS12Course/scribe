@@ -10,7 +10,7 @@ import UIKit
 import Speech
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     @IBOutlet weak var transcriptionTextView: UITextView!
@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         activitySpinner.isHidden = true
     }
 
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        player.stop()
+        activitySpinner.stopAnimating()
+        activitySpinner.isHidden = true
+    }
   
     func requestSpeechAuth() {
         SFSpeechRecognizer.requestAuthorization { (authStatus) in
@@ -30,34 +35,35 @@ class ViewController: UIViewController {
                     do {
                         let sound = try AVAudioPlayer(contentsOf: path)
                         self.audioPlayer = sound
+                        self.audioPlayer.delegate = self
                         sound.play()
                     } catch {
                         debugPrint("Error")
                     }
+                    
+                    let recognizer = SFSpeechRecognizer()
+                    let request = SFSpeechURLRecognitionRequest(url: path)
+                    recognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
+                        if let error = error {
+                            debugPrint("There was an error: ", error)
+                        } else {
+                            guard let result = result else { return }
+                            self.transcriptionTextView.text = result.bestTranscription.formattedString
+                            
+                        }
+                    })
                 }
             }
         }
     }
 
     
-//    func requestSpeechAuth() {
-//        SFSpeechRecognizer.requestAuthorization { authStatus in
-//            if authStatus == .authorized {
-//                if let path = Bundle.main.url(forResource: "testAudio", withExtension: "m4a") {
-//                    do {
-//                        let sound = try AVAudioPlayer(contentsOf: path)
-//                        self.audioPlayer = sound
-//                        sound.play()
-//                    } catch
-//                        debugPrint("Error!")
-//                    }
-//
-//
-//
-//                }
-//            }
-//        }
-//    }
 
+    @IBAction func playBtnWasPressed(_ sender: Any) {
+        activitySpinner.isHidden = false
+        activitySpinner.startAnimating()
+        requestSpeechAuth()
+    }
+    
 
 }

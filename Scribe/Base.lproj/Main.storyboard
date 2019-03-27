@@ -42,6 +42,9 @@
                                     <constraint firstAttribute="width" constant="60" id="fek-He-TVf"/>
                                     <constraint firstAttribute="height" constant="60" id="t1S-bf-yrH"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="playBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6WE-kA-aLS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvS-Ne-9RZ">
                                 <rect key="frame" x="90.5" y="631" width="194.5" height="28"/>
