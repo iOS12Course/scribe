@@ -13,6 +13,7 @@
 		F6254D1D224B0E170002D22F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6254D1C224B0E170002D22F /* Assets.xcassets */; };
 		F6254D20224B0E170002D22F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6254D1E224B0E170002D22F /* LaunchScreen.storyboard */; };
 		F6254D2B224B10BE0002D22F /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254D2A224B10BE0002D22F /* CircleButton.swift */; };
+		F6254D2D224B14850002D22F /* testAudio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F6254D2C224B14850002D22F /* testAudio.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F6254D1F224B0E170002D22F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6254D21224B0E170002D22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6254D2A224B10BE0002D22F /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		F6254D2C224B14850002D22F /* testAudio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = testAudio.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		F6254D14224B0E150002D22F /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				F6254D2E224B14970002D22F /* Resources */,
 				F6254D29224B10980002D22F /* Model */,
 				F6254D28224B10930002D22F /* View */,
 				F6254D27224B108A0002D22F /* Controller */,
@@ -89,6 +92,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F6254D2E224B14970002D22F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6254D2C224B14850002D22F /* testAudio.m4a */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				F6254D20224B0E170002D22F /* LaunchScreen.storyboard in Resources */,
 				F6254D1D224B0E170002D22F /* Assets.xcassets in Resources */,
 				F6254D1B224B0E150002D22F /* Main.storyboard in Resources */,
+				F6254D2D224B14850002D22F /* testAudio.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

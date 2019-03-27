@@ -82,6 +82,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="bW7-nf-Kep" id="gEz-GY-KW4"/>
+                        <outlet property="transcriptionTextView" destination="U3i-Xd-hau" id="cq2-fY-X9q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
