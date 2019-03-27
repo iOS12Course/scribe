@@ -12,6 +12,7 @@
 		F6254D1B224B0E150002D22F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6254D19224B0E150002D22F /* Main.storyboard */; };
 		F6254D1D224B0E170002D22F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6254D1C224B0E170002D22F /* Assets.xcassets */; };
 		F6254D20224B0E170002D22F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6254D1E224B0E170002D22F /* LaunchScreen.storyboard */; };
+		F6254D2B224B10BE0002D22F /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6254D2A224B10BE0002D22F /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F6254D1C224B0E170002D22F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6254D1F224B0E170002D22F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6254D21224B0E170002D22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6254D2A224B10BE0002D22F /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		F6254D14224B0E150002D22F /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				F6254D29224B10980002D22F /* Model */,
+				F6254D28224B10930002D22F /* View */,
+				F6254D27224B108A0002D22F /* Controller */,
 				F6254D15224B0E150002D22F /* AppDelegate.swift */,
-				F6254D17224B0E150002D22F /* ViewController.swift */,
 				F6254D19224B0E150002D22F /* Main.storyboard */,
 				F6254D1C224B0E170002D22F /* Assets.xcassets */,
 				F6254D1E224B0E170002D22F /* LaunchScreen.storyboard */,
 				F6254D21224B0E170002D22F /* Info.plist */,
 			);
 			path = Scribe;
+			sourceTree = "<group>";
+		};
+		F6254D27224B108A0002D22F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6254D17224B0E150002D22F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6254D28224B10930002D22F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6254D2A224B10BE0002D22F /* CircleButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6254D29224B10980002D22F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6254D2B224B10BE0002D22F /* CircleButton.swift in Sources */,
 				F6254D18224B0E150002D22F /* ViewController.swift in Sources */,
 				F6254D16224B0E150002D22F /* AppDelegate.swift in Sources */,
 			);

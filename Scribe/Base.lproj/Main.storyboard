@@ -35,7 +35,7 @@
                                     <constraint firstItem="vYT-1B-DPw" firstAttribute="centerX" secondItem="rAW-x5-N36" secondAttribute="centerX" id="qdc-Ab-e6P"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPE-rf-A6a">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPE-rf-A6a" customClass="CircleButton" customModule="Scribe" customModuleProvider="target">
                                 <rect key="frame" x="157.5" y="563" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -56,11 +56,19 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bW7-nf-Kep">
+                                <rect key="frame" x="157.5" y="563" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="I8o-zq-QrP"/>
+                                    <constraint firstAttribute="height" constant="60" id="mff-CE-WBL"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="U3i-Xd-hau" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2lr-Hs-KU8"/>
                             <constraint firstItem="vPE-rf-A6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3ym-ca-KQW"/>
+                            <constraint firstItem="bW7-nf-Kep" firstAttribute="centerX" secondItem="vPE-rf-A6a" secondAttribute="centerX" id="Dtz-pM-17c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U3i-Xd-hau" secondAttribute="trailing" constant="20" id="E6B-Ro-ytT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uvS-Ne-9RZ" secondAttribute="bottom" constant="8" id="L5J-c4-17f"/>
                             <constraint firstItem="uvS-Ne-9RZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6L-1m-9Nj"/>
@@ -68,6 +76,7 @@
                             <constraint firstItem="uvS-Ne-9RZ" firstAttribute="top" secondItem="vPE-rf-A6a" secondAttribute="bottom" constant="8" id="WVI-dM-Col"/>
                             <constraint firstItem="vPE-rf-A6a" firstAttribute="top" secondItem="U3i-Xd-hau" secondAttribute="bottom" constant="20" id="hO3-cf-QkK"/>
                             <constraint firstItem="rAW-x5-N36" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hkJ-Qh-1Kn"/>
+                            <constraint firstItem="bW7-nf-Kep" firstAttribute="centerY" secondItem="vPE-rf-A6a" secondAttribute="centerY" id="j42-ZP-6si"/>
                             <constraint firstItem="rAW-x5-N36" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="twE-w7-w8f"/>
                             <constraint firstItem="U3i-Xd-hau" firstAttribute="top" secondItem="rAW-x5-N36" secondAttribute="bottom" constant="20" id="yOx-bI-fnN"/>
                         </constraints>
